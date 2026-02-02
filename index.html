@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Ronay 💖</title>
+  <style>
+    body {
+      background: linear-gradient(135deg, #ffb6c1, #ffe4e1);
+      height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-family: 'Comic Sans MS', cursive;
+      text-align: center;
+      overflow: hidden;
+    }
+
+    .card {
+      background: rgba(255, 255, 255, 0.85);
+      padding: 40px;
+      border-radius: 25px;
+      box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+    }
+
+    h1 {
+      font-size: 2.8rem;
+      color: #ff4d6d;
+      margin-bottom: 10px;
+    }
+
+    p {
+      font-size: 1.2rem;
+      color: #555;
+    }
+
+    button {
+      font-size: 1.1rem;
+      padding: 12px 28px;
+      margin: 15px;
+      border: none;
+      border-radius: 30px;
+      cursor: pointer;
+    }
+
+    #yes {
+      background: #ff4d6d;
+      color: white;
+    }
+
+    #no {
+      background: white;
+      color: #ff4d6d;
+      position: absolute;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="card">
+    <h1>Ronay 💕</h1>
+    <p>
+      Roses are red 🌹<br>
+      Violets are blue 💙<br>
+      Life is better…<br>
+      When I’m with you 🥰
+    </p>
+    <h2>Will you be my Valentine?</h2>
+    <button id="yes" onclick="yesClick()">Yes 💖</button>
+    <button id="no">No 🙄</button>
+  </div>
+
+  <script>
+    const noBtn = document.getElementById('no');
+
+    noBtn.addEventListener('mouseover', () => {
+      const x = Math.random() * (window.innerWidth - 120);
+      const y = Math.random() * (window.innerHeight - 60);
+      noBtn.style.left = `${x}px`;
+      noBtn.style.top = `${y}px`;
+    });
+
+    function yesClick() {
+      document.body.innerHTML = `
+        <div style="text-align:center;">
+          <h1 style="color:#ff4d6d;font-size:3rem;">
+            YAY!!! 💘🥰
+          </h1>
+          <p style="font-size:1.4rem;">
+            Ronay, you just made me<br>
+            the happiest Valentine ever 💕
+          </p>
+        </div>
+      `;
+    }
+  </script>
+
+</body>
+</html>
